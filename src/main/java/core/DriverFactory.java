@@ -17,24 +17,21 @@ public class DriverFactory {
 	public WebDriver getDriver(String browserName) throws Exception {
 		switch(browserName.toLowerCase()) {  
 		 case "chrome" : 
-			  			 		     
-			   System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//drivers//chromedriver.exe");
-			  // System.setProperty("webdriver.chrome.driver","F:\\Mailer Cloud\\Automation\\TestFramework17\\chromedriver.exe");
-			    
-			   //System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
-			  /*  ChromeOptions options = new ChromeOptions();
-			    options.addArguments("--no-sandbox"); //Bypass OS security model   
-			    options.addArguments("--start-maximized");
-			    options.addArguments("--disable-dev-shm-usage");
-			    options.addArguments("--headless");
-			   // webDriver = new ChromeDriver(options);*/
-
-			    			
-
-		        driver =  new ChromeDriver();
-		        
-		        System.out.println("Wait");
-		        Thread.sleep(1000);
+				 //ChromeOptions chromeOptions = new ChromeOptions();
+				 //WebDriverManager.chromedriver().setup();
+				// System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//drivers//chromedriver");
+				// WebDriverManager.chromedriver().setup();
+				 WebDriverManager.chromedriver().setup();
+				 ChromeOptions options = new ChromeOptions();
+			         options.addArguments("--no-sandbox"); //Bypass OS security model   
+			         options.addArguments("--start-maximized");
+			         options.addArguments("--disable-dev-shm-usage");
+			         options.addArguments("--headless");
+			        //System.setProperty("webdriver.chrome.driver","F:\\Mailer Cloud\\Automation\\TestFramework17\\chromedriver.exe");
+		                 driver =  new ChromeDriver(options);
+				
+				System.out.println("Hello");
+				Thread.sleep(1000);
 				break;
 		  case "firefox" : 
 				System.setProperty("webdriver.gecko.driver","C:\\drivers\\geckodriver.exe");
