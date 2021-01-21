@@ -1,0 +1,17 @@
+tests\BulkCampaign.class
+pages\BasePage.class
+pages\CampaignDuplicatePage.class
+pages\LoginPage.class
+pages\CampaignElements.class
+pages\ScheduleCampaignPage.class
+pages\ChooseEmailTemplate.class
+pages\CampaignDashboardPage.class
+pages\CampaignPage.class
+tests\Login_TC.class
+tests\SanityTest.class
+pages\TimeBaseCampaignPage.class
+pages\CreateCampaignPage.class
+pages\LogoutPage.class
+pages\CampaignPreviewPage.class
+pages\ChooseContactPage.class
+tests\TestBase.class
