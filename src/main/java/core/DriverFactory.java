@@ -6,18 +6,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.chrome.ChromeOption;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 
 
 public class DriverFactory {
 	
 	private WebDriver driver;
 	
-	
-	
 	public WebDriver getDriver(String browserName) throws Exception {
 		switch(browserName.toLowerCase()) {  
-		 case "chrome" : 
+		  case "chrome" : 
 				 //ChromeOptions chromeOptions = new ChromeOptions();
 				 //WebDriverManager.chromedriver().setup();
 				// System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//drivers//chromedriver");
@@ -48,10 +47,6 @@ public class DriverFactory {
 		driver.manage().timeouts().pageLoadTimeout(Long.parseLong(TestConfig.getProperty("pageLoadTimeout")), TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(Long.parseLong(TestConfig.getProperty("implicitiWait")), TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		
-		
-		
-		
 		return driver;
 	}
 	
