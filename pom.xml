@@ -9,14 +9,18 @@
 			<artifactId>selenium-java</artifactId>
 			<version>3.141.59</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+	        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
 		<dependency>
   		   <groupId>org.seleniumhq.selenium</groupId>
-           <artifactId>selenium-chrome-driver</artifactId>
-           <version>3.141.0</version>
-        </dependency>
-		
-		
+          	   <artifactId>selenium-chrome-driver</artifactId>
+                   <version>3.141.0</version>
+                </dependency>
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+   			<groupId>io.github.bonigarcia</groupId>
+    		       <artifactId>webdrivermanager</artifactId>
+   			 <version>4.2.2</version>
+                 </dependency>
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
@@ -59,12 +63,12 @@
 						<suiteXmlFile>TestRunner.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<environmentVariables>
-						   <browser>${browser}</browser>
-						   <env>${env}</env>
+						  <browser>${browser}</browser>
+						<env>${env}</env> 
 					</environmentVariables> 
 				</configuration>
 			</plugin>
-						
+					
 		</plugins>
 	</build>
 </project>
